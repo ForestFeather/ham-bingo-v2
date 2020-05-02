@@ -118,7 +118,7 @@
         overflow: hidden;
         /* The following styles are required for the "scroll-over" effect */
         width: 100%;
-        height: 88%;
+        height: 48%;
         top: 0;
         left: 0;
         position: fixed !important;
@@ -127,12 +127,11 @@
     .splash {
         /* absolute center .splash within .splash-container */
         width: 80%;
-        height: 50%;
-        margin: auto;
+        height: 10%;
+        margin: 3em auto;
         position: absolute;
-        top: 100px; left: 0; bottom: 0; right: 0;
+        top: 30px; left: 0; bottom: 0; right: 0;
         text-align: center;
-        text-transform: uppercase;
     }
 
     /* This is the main heading that appears on the blue section */
@@ -145,6 +144,7 @@
         font-weight: 100;
         border-radius: 5px;
         line-height: 1em;
+        text-transform: uppercase;
     }
 
     /* This is the subheading that appears on the blue section */
@@ -161,7 +161,7 @@
     .content-wrapper {
         /* These styles are required for the "scroll-over" effect */
         position: absolute;
-        top: 87%;
+        top: 47%;
         width: 100%;
         min-height: 12%;
         z-index: 2;
@@ -235,8 +235,8 @@
     /* We decrease the width of the .splash, since we have more width
      *     to work with */
     .splash {
-        width: 50%;
-        height: 50%;
+        width: 70%;
+        height: 20%;
     }
 
     .splash-head {
@@ -264,7 +264,8 @@
     }
 
     table {
-        width: 50%;
+        width: 60%;
+        margin: 0 auto;
     }
 
     th .pure-table {

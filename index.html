@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Ham Radio Bingo Card Generator</title>
+        <title>Ham Radio Bingo Bingo Card Generator</title>
         <meta name="description" content="Generate a bingo card with various ham radio activities - perfect for Field Day or contest challenges!">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,7 +14,10 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/pure-min.css">
-        <!--<link rel="stylesheet" href="css/marketing.css">-->
+        <link rel="stylesheet" href="css/marketing.css">
+        <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+        <!--<link rel="stylesheet" href="css/customizations.css">-->
+        <link rel="stylesheet" rev="stylesheet" href="bingo-card.css" />
 
         <meta name="theme-color" content="#fafafa">
     </head>
@@ -25,28 +28,27 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div class="header no-print">
-            <div class="no-print home-menu pure-menu pure-menu-horizontal">
-                <a class="pure-menu-heading pure-menu-link" href="#">Ham Radio Bingo</a>
-                <ul class="pure-menu-list">
-                    <li class="pure-menu-item">
-                        <a class="pure-menu-link" href="#">Home</a>
-                    </li>
-                    <li class="pure-menu-item">
-                        <a class="pure-menu-link" href="#Card">Bingo Card</a>
-                    </li>
-                    <li class="pure-menu-item">
-                        <a class="pure-menu-link" href="#Settings">Settings</a>
-                    </li>
-                    <li class="pure-menu-item">
-                        <a class="pure-menu-link" href="http://radioham.org/">Stillwater Amateur Radio Association</a>
-                    </li>
-                </ul>
-            </div>
+        <div class="no-print home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed no-print">
+            <a class="pure-menu-heading" href="#">Ham Radio Bingo</a>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link" href="#">Home</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link" href="#Card" onclick="newCard();">Generate Card</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link" href="#Settings">Settings</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a class="pure-menu-link" href="http://radioham.org/">Stillwater Amateur Radio Association</a>
+                </li>
+            </ul>
         </div>
+
         <div class="splash-container no-print">
             <div class="splash">
-                <h1 class="splash-head">Ham Radio Card Generator</h1>
+                <h1 class="splash-head">Ham Radio Bingo Card Generator</h1>
                 <p class="splash-subhead">Ham radio has a thousand and one ways to operate, things that you could spend your life figuring
                 out. Why not spice it up with challenges to do things a little more uniquely, especially for contests? Or even add spice to
                 Field Day as people practice social distancing! Scoll down for your bingo card, and generate a unique one for you!</p>
@@ -61,102 +63,41 @@
                             <div class="pure-u-1 pure-u-lg-1-5"></div>
                             <div class="pure-u-1 pure-u--lg-3-5 is-center">
                                 <table class="pure-table pure-table-bordered is-center">
-                                    <thead>
-                                        <tr>
-                                            <th class='is-center'>B</th>
-                                            <th class='is-center'>I</th>
-                                            <th class='is-center'>N</th>
-                                            <th class='is-center'>G</th>
-                                            <th class='is-center'>O</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class='cell-content'>Contact Wisconsin</div>
-                                            </td>
-                                            <td>
-                                                <div class='cell-content'>Contact Newfoundland/Labrador</div>
-                                            </td>
-                                            <td>
-                                                <div class='cell-content'>Relay a formal message</div>
-                                            </td>
-                                            <td>
-                                                <div class='cell-content'>Contact Maine</div>
-                                            </td>
-                                            <td>
-                                                <div class='cell-content'>Contact Maryland - DC</div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class='cell-content'>Contact West Texas</div>
-                                            </td>
-                                            <td>
-                                                <div class='cell-content'>Contact South Carolina</div>
-                                            </td>
-                                            <td>
-                                                <div class='cell-content'>Make contact with a class E station</div>
-                                            </td>
-                                            <td>
-                                                <div class='cell-content'>Contact Arizona</div>
-                                            </td>
-                                            <td>
-                                                <div class='cell-content'>Contact Eastern Pennsylvania</div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class='cell-content'>Contact Illinois</div>
-                                            </td>
-                                            <td>
-                                                <div class='cell-content'>Contact Puerto Rico</div>
-                                            </td>
-                                            <td>
-                                                <div class='cell-content'>Contact Alberta</div>
-                                            </td>
-                                            <td>
-                                                <div class='cell-content'>Contact Missouri</div>
-                                            </td>
-                                            <td>
-                                                <div class='cell-content'>Make contact with a Military Station</div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class='cell-content'>Contact East Bay</div>
-                                            </td>
-                                            <td>
-                                                <div class='cell-content'>Make contact with FM</div>
-                                            </td>
-                                            <td>
-                                                <div class='cell-content'>Make contact on 1.25m</div>
-                                            </td>
-                                            <td>
-                                                <div class='cell-content'>Contact Ontario South</div>
-                                            </td>
-                                            <td>
-                                                <div class='cell-content'>Make contact with W1AW</div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class='cell-content'>Make a satellite QSO</div>
-                                            </td>
-                                            <td>
-                                                <div class='cell-content'>Contact Minnesota</div>
-                                            </td>
-                                            <td>
-                                                <div class='cell-content'>Make 5 digital contacts</div>
-                                            </td>
-                                            <td>
-                                                <div class='cell-content'>Contact Arkansas</div>
-                                            </td>
-                                            <td>
-                                                <div class='cell-content'>Contact South Texas</div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
+                                    <tr>
+                                        <td id="square0">&nbsp;</td>
+                                        <td id="square1">&nbsp;</td>
+                                        <td id="square2">&nbsp;</td>
+                                        <td id="square3">&nbsp;</td>
+                                        <td id="square4">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="square5">&nbsp;</td>
+                                        <td id="square6">&nbsp;</td>
+                                        <td id="square7">&nbsp;</td>
+                                        <td id="square8">&nbsp;</td>
+                                        <td id="square9">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="square10">&nbsp;</td>
+                                        <td id="square11">&nbsp;</td>
+                                        <td id="free">FREE</td>
+                                        <td id="square12">&nbsp;</td>
+                                        <td id="square13">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="square14">&nbsp;</td>
+                                        <td id="square15">&nbsp;</td>
+                                        <td id="square16">&nbsp;</td>
+                                        <td id="square17">&nbsp;</td>
+                                        <td id="square18">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td id="square19">&nbsp;</td>
+                                        <td id="square20">&nbsp;</td>
+                                        <td id="square21">&nbsp;</td>
+                                        <td id="square22">&nbsp;</td>
+                                        <td id="square23">&nbsp;</td>
+                                    </tr>
                                 </table>
                             </div>
                             <div class="pure-u-1 pure-u-lg-1-5"></div>
@@ -178,374 +119,79 @@
                         &#39;print&#39; the page! You will get your bingo card and only your bingo card.</p>
                         <p>Many thanks to the countless individuals who helped make this possible, supplying ideas and constantly encouraging!
                         Thank you! List ideas are always welcome, see below to contact us.</p>
-                        <form class='pure-form' action='index.php' method="get">
-                            <fieldset>
-                                <div class="pure-g">
-                                    <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
-                                        <div class='l-box'>
-                                            <h3 class='content-head-ribbon'>Settings</h3>
-                                            <label class='content-head-ribbon' for='seed'>Seed</label> 
-                                            <input id='seed' name='seed' type='text' placeholder='Seed Value' value='7094390' /> 
-                                            <label class='pure-checkbox content-head-ribbon' for='free'>
-                                                <input type='checkbox' id='free' name='free' <? echo isset($_GET['free']) ? 'checked' : '';  ?> /> Free Center
-                                                Tile</label>
-                                            <div class='l-box'>
-                                                <h4 class='content-head-ribbon'>Include:</h4>
-                                                <label class='pure-checkbox content-head-ribbon' for='Region-0'>
-                                                    <input type='checkbox' id='Region-0' name='Region-0' checked="checked" /> Region-0</label>
-                                                <label class='pure-checkbox content-head-ribbon' for='Region-1'>
-                                                    <input type='checkbox' id='Region-1' name='Region-1' checked="checked" /> Region-1</label>
-                                                <label class='pure-checkbox content-head-ribbon' for='Region-2'>
-                                                    <input type='checkbox' id='Region-2' name='Region-2' checked="checked" /> Region-2</label>
-                                                <label class='pure-checkbox content-head-ribbon' for='Region-3'>
-                                                    <input type='checkbox' id='Region-3' name='Region-3' checked="checked" /> Region-3</label>
-                                                <label class='pure-checkbox content-head-ribbon' for='Region-4'>
-                                                    <input type='checkbox' id='Region-4' name='Region-4' checked="checked" /> Region-4</label>
-                                                <label class='pure-checkbox content-head-ribbon' for='Region-5'>
-                                                    <input type='checkbox' id='Region-5' name='Region-5' checked="checked" /> Region-5</label>
-                                                <label class='pure-checkbox content-head-ribbon' for='Region-6'>
-                                                    <input type='checkbox' id='Region-6' name='Region-6' checked="checked" /> Region-6</label>
-                                                <label class='pure-checkbox content-head-ribbon' for='Region-7'>
-                                                    <input type='checkbox' id='Region-7' name='Region-7' checked="checked" /> Region-7</label>
-                                                <label class='pure-checkbox content-head-ribbon' for='Region-8'>
-                                                    <input type='checkbox' id='Region-8' name='Region-8' checked="checked" /> Region-8</label>
-                                                <label class='pure-checkbox content-head-ribbon' for='Region-9'>
-                                                    <input type='checkbox' id='Region-9' name='Region-9' checked="checked" /> Region-9</label>
-                                                <label class='pure-checkbox content-head-ribbon' for='Canada'>
-                                                    <input type='checkbox' id='Canada' name='Canada' checked="checked" /> Canada</label>
-                                                <label class='pure-checkbox content-head-ribbon' for='Mode-Counts'>
-                                                    <input type='checkbox' id='Mode-Counts' name='Mode-Counts' checked="checked" /> Mode-Counts</label>
-                                                <label class='pure-checkbox content-head-ribbon' for='Band'>
-                                                    <input type='checkbox' id='Band' name='Band' checked="checked" /> Band</label>
-                                                <label class='pure-checkbox content-head-ribbon' for='Protocol-Special'>
-                                                    <input type='checkbox' id='Protocol-Special' name='Protocol-Special' checked="checked" />
-                                                    Protocol-Special</label>
-                                                <label class='pure-checkbox content-head-ribbon' for='Location'>
-                                                    <input type='checkbox' id='Location' name='Location' checked="checked" /> Location</label>
-                                                <label class='pure-checkbox content-head-ribbon' for='Club-Challenges'>
-                                                    <input type='checkbox' id='Club-Challenges' name='Club-Challenges' checked="checked" /> Club-Challenges</label>
-                                                <label class='pure-checkbox content-head-ribbon' for='Counts'>
-                                                    <input type='checkbox' id='Counts' name='Counts' checked="checked" /> Counts</label>
-                                                <label class='pure-checkbox content-head-ribbon' for='Station-Classes'>
-                                                    <input type='checkbox' id='Station-Classes' name='Station-Classes' checked="checked" /> Station-Classes</label>
-                                                <label class='pure-checkbox content-head-ribbon' for='Bonus-Points'>
-                                                    <input type='checkbox' id='Bonus-Points' name='Bonus-Points' checked="checked" /> Bonus-Points</label>
-                                            </div>
-                                            <button type='submit' class='pure-button pure-button-primary'>Generate</button></div>
-                                    </div>
-                                    <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
-                                        <div class='l-box'>
-                                            <h3 class='content-head-ribbon'>Region-8</h3>
-                                            <ul>
-                                                <li>Contact Michigan</li>
-                                                <li>Contact Ohio</li>
-                                                <li>Contact West Virginia</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
-                                        <div class='l-box'>
-                                            <h3 class='content-head-ribbon'>Region-9</h3>
-                                            <ul>
-                                                <li>Contact Illinois</li>
-                                                <li>Contact Indiana</li>
-                                                <li>Contact Wisconsin</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
-                                        <div class='l-box'>
-                                            <h3 class='content-head-ribbon'>Region-3</h3>
-                                            <ul>
-                                                <li>Contact Delaware</li>
-                                                <li>Contact Eastern Pennsylvania</li>
-                                                <li>Contact Maryland - DC</li>
-                                                <li>Contact Western Pennsylvania</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
-                                        <div class='l-box'>
-                                            <h3 class='content-head-ribbon'>Region-2</h3>
-                                            <ul>
-                                                <li>Contact Eastern New York</li>
-                                                <li>Contact New York City - Long Island</li>
-                                                <li>Contact Northern New Jersey</li>
-                                                <li>Contact Northern New York</li>
-                                                <li>Contact Southern New Jersey</li>
-                                                <li>Contact Western New York</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
-                                        <div class='l-box'>
-                                            <h3 class='content-head-ribbon'>Region-1</h3>
-                                            <ul>
-                                                <li>Contact Connecticut</li>
-                                                <li>Contact Eastern Massachusetts</li>
-                                                <li>Contact Western Massachusetts</li>
-                                                <li>Contact Maine</li>
-                                                <li>Contact New Hampshire</li>
-                                                <li>Contact Rhode Island</li>
-                                                <li>Contact Vermont</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
-                                        <div class='l-box'>
-                                            <h3 class='content-head-ribbon'>Station-Classes</h3>
-                                            <ul>
-                                                <li>Make contact with a Class A station</li>
-                                                <li>Make contact with a Class B station</li>
-                                                <li>Make contact with a Class C station</li>
-                                                <li>Make contact with a Class D station</li>
-                                                <li>Make contact with a class E station</li>
-                                                <li>Make contact with a class F station</li>
-                                                <li>Make contact with a QRP station</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
-                                        <div class='l-box'>
-                                            <h3 class='content-head-ribbon'>Counts</h3>
-                                            <ul>
-                                                <li>Make 5 contacts in 10 minutes</li>
-                                                <li>Make 10 contacts in 10 minutes</li>
-                                                <li>Make 30 contacts in an hour</li>
-                                                <li>Make 100 contacts in 3 hours</li>
-                                                <li>Make 300 contacts in 6 hours</li>
-                                                <li>Make 500 contacts in 8 hours</li>
-                                                <li>make 1000 contacts in 24 hours</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
-                                        <div class='l-box'>
-                                            <h3 class='content-head-ribbon'>Club-Challenges</h3>
-                                            <ul>
-                                                <li>Make contact with 1 club member</li>
-                                                <li>Make contact with 5 club members</li>
-                                                <li>Make contact with 10 club members</li>
-                                                <li>Make contact with a nearby club</li>
-                                                <li>Make contact with a distant club</li>
-                                                <li>Make contact with a national club</li>
-                                                <li>Make contact with an international club</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
-                                        <div class='l-box'>
-                                            <h3 class='content-head-ribbon'>Protocol-Special</h3>
-                                            <ul>
-                                                <li>Make contact with CW</li>
-                                                <li>Make contact with AM</li>
-                                                <li>Make contact with SSB</li>
-                                                <li>Make contact with AM</li>
-                                                <li>Make contact with FM</li>
-                                                <li>Make contact with FT4/8</li>
-                                                <li>Make contact with PSK31</li>
-                                                <li>Make contact with APRS</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
-                                        <div class='l-box'>
-                                            <h3 class='content-head-ribbon'>Region-0</h3>
-                                            <ul>
-                                                <li>Contact Minnesota</li>
-                                                <li>Contact Iowa</li>
-                                                <li>Contact Colorado</li>
-                                                <li>Contact Kansas</li>
-                                                <li>Contact Missouri</li>
-                                                <li>Contact Nebraska</li>
-                                                <li>Contact North Dakota</li>
-                                                <li>Contact South Dakota</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
-                                        <div class='l-box'>
-                                            <h3 class='content-head-ribbon'>Region-5</h3>
-                                            <ul>
-                                                <li>Contact Arkansas</li>
-                                                <li>Contact Louisiana</li>
-                                                <li>Contact Mississippi</li>
-                                                <li>Contact New Mexico</li>
-                                                <li>Contact North Texas</li>
-                                                <li>Contact Oklahoma</li>
-                                                <li>Contact South Texas</li>
-                                                <li>Contact West Texas</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
-                                        <div class='l-box'>
-                                            <h3 class='content-head-ribbon'>Mode-Counts</h3>
-                                            <ul>
-                                                <li>Make 1 CW contact</li>
-                                                <li>Make 5 CW contacts</li>
-                                                <li>Make 1 SSB contact</li>
-                                                <li>Make 5 SSB contacts</li>
-                                                <li>Make 1 AM contact</li>
-                                                <li>Make 5 AM contacts</li>
-                                                <li>Make 1 digital contact</li>
-                                                <li>Make 5 digital contacts</li>
-                                                <li>Make 1 satellite contact</li>
-                                                <li>Make 5 satellite contacts</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
-                                        <div class='l-box'>
-                                            <h3 class='content-head-ribbon'>Band</h3>
-                                            <ul>
-                                                <li>Make contact on 160m</li>
-                                                <li>Make contact on 80m</li>
-                                                <li>Make contact on 40m</li>
-                                                <li>Make contact on 20m</li>
-                                                <li>Make contact on 15m</li>
-                                                <li>Make contact on 10m</li>
-                                                <li>Make contact on 6m</li>
-                                                <li>Make contact on 2m</li>
-                                                <li>Make contact on 1.25m</li>
-                                                <li>Make contact on 70cm</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
-                                        <div class='l-box'>
-                                            <h3 class='content-head-ribbon'>Region-7</h3>
-                                            <ul>
-                                                <li>Contact Arizona</li>
-                                                <li>Contact Eastern Washington</li>
-                                                <li>Contact Idaho</li>
-                                                <li>Contact Montana</li>
-                                                <li>Contact Nevada</li>
-                                                <li>Contact Oregon</li>
-                                                <li>Contact Utah</li>
-                                                <li>Contact Western Washington</li>
-                                                <li>Contact Wyoming</li>
-                                                <li>Contact Alaska</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
-                                        <div class='l-box'>
-                                            <h3 class='content-head-ribbon'>Region-6</h3>
-                                            <ul>
-                                                <li>Contact East Bay</li>
-                                                <li>Contact Los Angeles</li>
-                                                <li>Contact Orange County</li>
-                                                <li>Contact Santa Barbara</li>
-                                                <li>Contact Santa Clara Valley</li>
-                                                <li>Contact San Diego</li>
-                                                <li>Contact San Fransisco</li>
-                                                <li>Contact San Joaquin Valley</li>
-                                                <li>Contact Sacreamento Valley</li>
-                                                <li>Contact Pacific</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
-                                        <div class='l-box'>
-                                            <h3 class='content-head-ribbon'>Location</h3>
-                                            <ul>
-                                                <li>Make contact with Maritime station</li>
-                                                <li>Make contact with Mobile station</li>
-                                                <li>Make contact with Aeronautical station</li>
-                                                <li>Make contact with International Space Station</li>
-                                                <li>Make contact with a Military Station</li>
-                                                <li>Make contact with a National Park</li>
-                                                <li>Make contact with a State Park</li>
-                                                <li>Make contact with a Summit on the Air</li>
-                                                <li>Make contact with an Island on the Air</li>
-                                                <li>Make contact with a Lighthouse/Lightship</li>
-                                                <li>Make contact with a Special Event Station</li>
-                                                <li>Make contact with W1AW</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
-                                        <div class='l-box'>
-                                            <h3 class='content-head-ribbon'>Region-4</h3>
-                                            <ul>
-                                                <li>Contact Alabama</li>
-                                                <li>Contact Georgia</li>
-                                                <li>Contact Kentucky</li>
-                                                <li>Contact North Carolina</li>
-                                                <li>Contact Northern Florida</li>
-                                                <li>Contact South Carolina</li>
-                                                <li>Contact Southern Florida</li>
-                                                <li>Contact West Central Flordia</li>
-                                                <li>Contact Tennessee</li>
-                                                <li>Contact Virginia</li>
-                                                <li>Contact Puerto Rico</li>
-                                                <li>Contact Virgin Islands</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
-                                        <div class='l-box'>
-                                            <h3 class='content-head-ribbon'>Canada</h3>
-                                            <ul>
-                                                <li>Contact Maritime</li>
-                                                <li>Contact Newfoundland/Labrador</li>
-                                                <li>Contact Prince Edward Island</li>
-                                                <li>Contact Quebec</li>
-                                                <li>Contact Ontario North</li>
-                                                <li>Contact Ontario South</li>
-                                                <li>Contact Ontario East</li>
-                                                <li>Contact Greater Toronto Area</li>
-                                                <li>Contact Manitoba</li>
-                                                <li>Contact Saskatchewan</li>
-                                                <li>Contact Alberta</li>
-                                                <li>Contact British Columbia</li>
-                                                <li>Contact Northern Territories</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
-                                        <div class='l-box'>
-                                            <h3 class='content-head-ribbon'>Bonus-Points</h3>
-                                            <ul>
-                                                <li>Use 100% Emergency Power</li>
-                                                <li>Obtain publicity from local media</li>
-                                                <li>Operate from a public location</li>
-                                                <li>Provide public information</li>
-                                                <li>Originate a Formal Message to Section Manager</li>
-                                                <li>Relay a formal message</li>
-                                                <li>Make a satellite QSO</li>
-                                                <li>Make 5 contacts using alternate power source</li>
-                                                <li>Copy a W1AW bulletin</li>
-                                                <li>Submit field day entry via web</li>
-                                                <li>Participate with a youth</li>
-                                                <li>Promote your operation via social media</li>
-                                                <li>Declare a safety officer for your operation</li>
-                                            </ul>
-                                        </div>
+                        <div class="pure-g">
+                            <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
+                                <div class='l-box'>
+                                    <h3 class='content-head-ribbon'>Settings</h3>
+                                    <label class='content-head-ribbon' for='seed'>Seed</label> 
+                                    <input id='seed' name='seed' type='text' placeholder='Seed Value'/>
+                                    <button id='generateSeed' class='pure-button' onclick="newSeed();">New Seed</button>
+                                    <div class='l-box'>
+                                        <h4 class='content-head-ribbon'>Include:</h4>
+                                        <label class='pure-checkbox content-head-ribbon' for='Region-0'>
+                                            <input type='checkbox' id='Region-0' name='Region-0' checked="checked" />Region 0</label>
+                                        <label class='pure-checkbox content-head-ribbon' for='Region-1'>
+                                            <input type='checkbox' id='Region-1' name='Region-1' checked="checked" />Region 1</label>
+                                        <label class='pure-checkbox content-head-ribbon' for='Region-2'>
+                                            <input type='checkbox' id='Region-2' name='Region-2' checked="checked" />Region 2</label>
+                                        <label class='pure-checkbox content-head-ribbon' for='Region-3'>
+                                            <input type='checkbox' id='Region-3' name='Region-3' checked="checked" />Region 3</label>
+                                        <label class='pure-checkbox content-head-ribbon' for='Region-4'>
+                                            <input type='checkbox' id='Region-4' name='Region-4' checked="checked" />Region 4</label>
+                                        <label class='pure-checkbox content-head-ribbon' for='Region-5'>
+                                            <input type='checkbox' id='Region-5' name='Region-5' checked="checked" />Region 5</label>
+                                        <label class='pure-checkbox content-head-ribbon' for='Region-6'>
+                                            <input type='checkbox' id='Region-6' name='Region-6' checked="checked" />Region 6</label>
+                                        <label class='pure-checkbox content-head-ribbon' for='Region-7'>
+                                            <input type='checkbox' id='Region-7' name='Region-7' checked="checked" />Region 7</label>
+                                        <label class='pure-checkbox content-head-ribbon' for='Region-8'>
+                                            <input type='checkbox' id='Region-8' name='Region-8' checked="checked" />Region 8</label>
+                                        <label class='pure-checkbox content-head-ribbon' for='Region-9'>
+                                            <input type='checkbox' id='Region-9' name='Region-9' checked="checked" />Region 9</label>
+                                        <label class='pure-checkbox content-head-ribbon' for='Canada'>
+                                            <input type='checkbox' id='Canada' name='Canada' checked="checked" />Canada</label>
+                                        <label class='pure-checkbox content-head-ribbon' for='Mode-Counts'>
+                                            <input type='checkbox' id='Mode-Counts' name='Mode-Counts' checked="checked" />Mode-Counts</label>
+                                        <label class='pure-checkbox content-head-ribbon' for='Band'>
+                                            <input type='checkbox' id='Band' name='Band' checked="checked" />Band</label>
+                                        <label class='pure-checkbox content-head-ribbon' for='Protocol-Special'>
+                                            <input type='checkbox' id='Protocol-Special' name='Protocol-Special' checked="checked" />
+                                            Protocol-Special</label>
+                                        <label class='pure-checkbox content-head-ribbon' for='Location'>
+                                            <input type='checkbox' id='Location' name='Location' checked="checked" />Location</label>
+                                        <label class='pure-checkbox content-head-ribbon' for='Club-Challenges'>
+                                            <input type='checkbox' id='Club-Challenges' name='Club-Challenges' checked="checked" />Club-Challenges</label>
+                                        <label class='pure-checkbox content-head-ribbon' for='Counts'>
+                                            <input type='checkbox' id='Counts' name='Counts' checked="checked" />Counts</label>
+                                        <label class='pure-checkbox content-head-ribbon' for='Station-Classes'>
+                                            <input type='checkbox' id='Station-Classes' name='Station-Classes' checked="checked" />Station-Classes</label>
+                                        <label class='pure-checkbox content-head-ribbon' for='Bonus-Points'>
+                                            <input type='checkbox' id='Bonus-Points' name='Bonus-Points' checked="checked" />Bonus-Points</label>
                                     </div>
                                 </div>
-                            </fieldset>
-                        </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer l-box is-center no-print">
+                        <p>Made by Collin &#39;KE0IYN&#39; O&#39;Connor. &copy; 2020. Questions, comments? Contact 
+                        <a href='mailto:ke0iyn_IfItsBetweenAndIncludesUnderscoresItsGone__@radioham.org'>Webmaster</a></p>
                     </div>
             </div>
-            <div class="footer l-box is-center no-print">
-                <p>Made by Collin &#39;KE0IYN&#39; O&#39;Connor. ɠ2020. Questions, comments? Contact 
-                <a href='mailto:ke0iyn_IfItsBetweenAndIncludesUnderscoresItsGone__@radioham.org'>Webmaster</a></p>
-            </div>
-        </div>
 
-        <script src="js/vendor/modernizr-3.8.0.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+            <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+            <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+            <script src="js/seedrandom.min.js"></script>
+            <script src="js/plugins.js"></script>
+            <script src="js/main.js"></script>
+            <script type="text/javascript" src="js/bingo-card.js"></script>
+            <script>initAll();</script>
 
-        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-        <script>
-            window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+            <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+            <script>
+                window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
 ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-        </script>
-        <script src="https://www.google-analytics.com/analytics.js" async></script>
+            </script>
+            <script src="https://www.google-analytics.com/analytics.js" async></script>
     </body>
 </html>

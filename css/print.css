@@ -1,0 +1,32 @@
+.no-print, .no-print * {
+    display: none !important;
+}
+
+#content, table {
+    width: 100%;
+    margin: 0;
+    float: none;
+}
+
+body {
+    font-size: small;
+}
+
+td {
+    width: 20%;
+    position: relative;
+}
+
+td:after {
+    content: '';
+    display: block;
+    margin-top: 100%;
+}
+
+td .cell-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
