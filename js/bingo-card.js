@@ -1,12 +1,12 @@
 var region0 = [
     'MN Minnesota',
-    'Iowa',
-    'Colorado',
-    'Kansas',
-    'Missouri',
-    'Nebraska',
-    'North Dakota',
-    'South Dakota'
+    'IA Iowa',
+    'CO Colorado',
+    'KS Kansas',
+    'MO Missouri',
+    'NE Nebraska',
+    'ND North Dakota',
+    'SD South Dakota'
 ];
 
 var region1 = [
@@ -20,99 +20,133 @@ var region1 = [
 ];
 
 var region2 = [
-    'Eastern New York',
-    'New York City - Long Island',
-    'Northern New Jersey',
-    'Northern New York',
-    'Southern New Jersey',
-    'Western New York'
+    'ENY Eastern New York',
+    'NLI New York City - Long Island',
+    'NNJ Northern New Jersey',
+    'NNY Northern New York',
+    'SNJ Southern New Jersey',
+    'WNY Western New York'
 ];
 
 var region3 = [
-    'Delaware',
-    'Eastern Pennsylvania',
-    'Maryland - DC',
-    'Western Pennsylvania'
+    'DE Delaware',
+    'EPA Eastern Pennsylvania',
+    'MDC Maryland - DC',
+    'WPA Western Pennsylvania'
 ];
 
 var region4 = [
-    'Alabama',
-    'Georgia',
-    'Kentucky',
-    'North Carolina',
-    'Northern Florida',
-    'South Carolina',
-    'Southern Florida',
-    'West Central Flordia',
-    'Tennessee',
-    'Virginia',
-    'Puerto Rico',
-    'Virgin Islands'
+    'AL Alabama',
+    'GA Georgia',
+    'KY Kentucky',
+    'NC North Carolina',
+    'NFL Northern Florida',
+    'SC South Carolina',
+    'SFL Southern Florida',
+    'WCF West Central Flordia',
+    'TN Tennessee',
+    'VA Virginia',
+    'PR Puerto Rico',
+    'VI Virgin Islands'
 ];
 
 var region5 = [
-    'Arkansas',
-    'Louisiana',
-    'Mississippi',
-    'New Mexico',
-    'North Texas',
-    'Oklahoma',
-    'South Texas',
-    'West Texas'
+    'AK Arkansas',
+    'LA Louisiana',
+    'MS Mississippi',
+    'NM New Mexico',
+    'NTX North Texas',
+    'OK Oklahoma',
+    'STX South Texas',
+    'WTX West Texas'
 ];
 
 var region6 = [
-    'East Bay',
-    'Los Angeles',
-    'Orange County',
-    'Santa Barbara',
-    'Santa Clara Valley',
-    'San Diego',
-    'San Fransisco',
-    'San Joaquin Valley',
-    'Sacreamento Valley',
-    'Pacific'
+    'EB East Bay',
+    'LAX Los Angeles',
+    'ORG Orange County',
+    'SB Santa Barbara',
+    'SCV Santa Clara Valley',
+    'SDG San Diego',
+    'SF San Fransisco',
+    'SJV San Joaquin Valley',
+    'SV Sacramento Valley',
+    'PAC Pacific'
 ];
 
 var region7 = [
-    'Arizona',
-    'Eastern Washington',
-    'Idaho',
-    'Montana',
-    'Nevada',
-    'Oregon',
-    'Utah',
-    'Western Washington',
-    'Wyoming',
-    'Alaska'
+    'AZ Arizona',
+    'EWA Eastern Washington',
+    'ID Idaho',
+    'MT Montana',
+    'NV Nevada',
+    'OR Oregon',
+    'UT Utah',
+    'WWA Western Washington',
+    'WY Wyoming',
+    'AK Alaska'
 ];
 
 var region8 = [
-    'Michigan',
-    'Ohio',
-    'West Virginia'
+    'MI Michigan',
+    'OH Ohio',
+    'WV West Virginia'
 ];
 
 var region9 = [
-    'Illinois',
-    'Indiana',
-    'Wisconsin'
+    'IL Illinois',
+    'IN Indiana',
+    'WI Wisconsin'
 ];
 
 var canadaRegions = [
-    'Maritime',
-    'Newfoundland/Labrador',
-    'Prince Edward Island',
-    'Quebec',
-    'Ontario North',
-    'Ontario South',
-    'Ontario East',
-    'Greater Toronto Area',
-    'Manitoba',
-    'Saskatchewan',
-    'Alberta',
-    'British Columbia',
-    'Northern Territories'
+    'MAR Maritime',
+    'NL Newfoundland / Labrador',
+    'PE Prince Edward Island',
+    'qC Quebec',
+    'ONN Ontario North',
+    'ONS Ontario South',
+    'ONE Ontario East',
+    'GTA Greater Toronto Area',
+    'MB Manitoba',
+    'SK Saskatchewan',
+    'AB Alberta',
+    'BC British Columbia',
+    'NT Northern Territories'
+];
+
+var generalRegions = [
+    'ITU Region 1',
+    'ITU Region 2',
+    'ITU Region 3'
+];
+
+var continents = [
+    'North America',
+    'South America',
+    'Europe',
+    'Africa',
+    'Asia',
+    'Oceania'
+];
+
+var distances = [
+    'Contact 1-5 Miles Away',
+    'Contact 5-15 Miles Away',
+    'Contact 15-40 Miles Away',
+    'Contact 40-75 Miles Away',
+    'Contact 75-120 Miles Away',
+    'Contact 120-200 Miles Away',
+    'Contact 200-300 Miles Away',
+    'Contact 300-500 Miles Away',
+    'Contact 500-750 Miles Away',
+    'Contact 750-1000 Miles Away',
+    'Contact 1000-1500 Miles Away',
+    'Contact 1500-2000 Miles Away',
+    'Contact 2000-3000 Miles Away',
+    'Contact 3000-5000 Miles Away',
+    'Contact 5000-8000 Miles Away',
+    'Contact >8000 Miles Away'
 ];
 
 var modeCounts = [
@@ -129,52 +163,52 @@ var modeCounts = [
 ];
 
 var bands = [
-    'Make contact on 160m',
-    'Make contact on 80m',
-    'Make contact on 40m',
-    'Make contact on 20m',
-    'Make contact on 15m',
-    'Make contact on 10m',
-    'Make contact on 6m',
-    'Make contact on 2m',
-    'Make contact on 1.25m',
-    'Make contact on 70cm'
+    'Contact on 160m',
+    'Contact on 80m',
+    'Contact on 40m',
+    'Contact on 20m',
+    'Contact on 15m',
+    'Contact on 10m',
+    'Contact on 6m',
+    'Contact on 2m',
+    'Contact on 1.25m',
+    'Contact on 70cm'
 ];
 
 var specialProtocols = [
-    'Make contact with CW',
-    'Make contact with AM',
-    'Make contact with SSB',
-    'Make contact with AM',
-    'Make contact with FM',
-    'Make contact with FT4/8',
-    'Make contact with PSK31',
-    'Make contact with APRS'
+    'Contact with CW',
+    'Contact with AM',
+    'Contact with SSB',
+    'Contact with AM',
+    'Contact with FM',
+    'Contact with FT4/8',
+    'Contact with PSK31',
+    'Contact with APRS'
 ];
 
 var locationChallenges = [
-    'Make contact with Maritime station',
-    'Make contact with Mobile station',
-    'Make contact with Aeronautical station',
-    'Make contact with International Space Station',
-    'Make contact with a Military Station',
-    'Make contact with a National Park',
-    'Make contact with a State Park',
-    'Make contact with a Summit on the Air',
-    'Make contact with an Island on the Air',
-    'Make contact with a Lighthouse/Lightship',
-    'Make contact with a Special Event Station',
-    'Make contact with W1AW'
+    'Contact with Maritime station',
+    'Contact with Mobile station',
+    'Contact with Aeronautical station',
+    'Contact with International Space Station',
+    'Contact with a Military Station',
+    'Contact with a National Park',
+    'Contact with a State Park',
+    'Contact with a Summit on the Air',
+    'Contact with an Island on the Air',
+    'Contact with a Lighthouse / Lightship',
+    'Contact with a Special Event Station',
+    'Contact with W1AW'
 ];
 
 var clubChallenges = [
-    'Make contact with 1 club member',
-    'Make contact with 5 club members',
-    'Make contact with 10 club members',
-    'Make contact with a nearby club',
-    'Make contact with a distant club',
-    'Make contact with a national club',
-    'Make contact with an international club'
+    'Contact with 1 club member',
+    'Contact with 5 club members',
+    'Contact with 10 club members',
+    'Contact with a nearby club',
+    'Contact with a distant club',
+    'Contact with a national club',
+    'Contact with an international club'
 ];
 
 var contactCounts = [
@@ -188,13 +222,13 @@ var contactCounts = [
 ];
 
 var stationClasses = [
-    'Make contact with a Class A station',
-    'Make contact with a Class B station',
-    'Make contact with a Class C station',
-    'Make contact with a Class D station',
-    'Make contact with a class E station',
-    'Make contact with a class F station',
-    'Make contact with a QRP station'
+    'Contact with a Class A station',
+    'Contact with a Class B station',
+    'Contact with a Class C station',
+    'Contact with a Class D station',
+    'Contact with a class E station',
+    'Contact with a class F station',
+    'Contact with a QRP station'
 ];
 
 var bonusPoints = [
@@ -228,6 +262,9 @@ var listOfCategories = {
     'Region 8': region8,
     'Region 9': region9,
     'Canada Regions': canadaRegions,
+    'General Regions': generalRegions,
+    'Continents': continents,
+    'Distances': distances,
     'Mode Counts': modeCounts,
     'Bands': bands,
     'Special Protocols': specialProtocols,
