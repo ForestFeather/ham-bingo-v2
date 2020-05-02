@@ -200,6 +200,8 @@
     .footer {
         background: #111;
         color: #aaa;
+        width: 100%;
+        letter-spacing: 0em;
     }
 
     /*
