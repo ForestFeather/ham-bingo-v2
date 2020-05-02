@@ -199,9 +199,6 @@ var stationClasses = [
 
 var bonusPoints = [
     'Use 100% Emergency Power',
-    'Obtain publicity from local media',
-    'Operate from a public location',
-    'Provide public information',
     'Originate a Formal Message to Section Manager',
     'Relay a formal message',
     'Make a satellite QSO',
@@ -213,11 +210,52 @@ var bonusPoints = [
     'Declare a safety officer for your operation'
 ];
 
+var socialPoints = [
+    'Obtain publicity from local media',
+    'Operate from a public location',
+    'Provide public information'
+];
+
+var listOfCategories = {
+    'Region 0': region0,
+    'Region 1': region1,
+    'Region 2': region2,
+    'Region 3': region3,
+    'Region 4': region4,
+    'Region 5': region5,
+    'Region 6': region6,
+    'Region 7': region7,
+    'Region 8': region8,
+    'Region 9': region9,
+    'Canada Regions': canadaRegions,
+    'Mode Counts': modeCounts,
+    'Bands': bands,
+    'Special Protocols': specialProtocols,
+    'Location Challenges': locationChallenges,
+    'Club Challenges': clubChallenges,
+    'Contact Counts': contactCounts,
+    'Station Classes': stationClasses,
+    'Bonus Points': bonusPoints,
+    'Social Points': socialPoints,
+};
+
+
 var emptyLines = [];
-var lines = emptyLines.concat(region0, region1, region2, region3, region4, region5, region6, region7, region8, region9);
-var linesCopy = lines.filter(Boolean).slice();
+var linesCopy = buildLines();
 var seed;
 var rng = new Math.seedrandom();
+
+function buildLines() {
+    var lines = [];
+    for (var [key, value] of Object.entries(listOfCategories)) {
+        var checkbox = document.getElementById(key);
+        if(checkbox == null || checkbox.checked == true) {
+            lines = lines.concat(value);
+        }
+    }
+    
+    return lines.filter(Boolean).slice();
+}
 
 function newSeed() {
     var seedField = document.getElementById("seed");
@@ -236,7 +274,7 @@ function initAll() {
 
 function newCard() {
     rng = new Math.seedrandom(document.getElementById("seed").value);
-    linesCopy = lines.filter(Boolean).slice();
+    linesCopy = buildLines();
     for (var i = 0; i < 24; i++) {
         setSquare(i);
     }
