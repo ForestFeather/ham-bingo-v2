@@ -215,7 +215,7 @@ var bonusPoints = [
 
 var emptyLines = [];
 var lines = emptyLines.concat(region0, region1, region2, region3, region4, region5, region6, region7, region8, region9);
-var linesCopy = lines.slice();
+var linesCopy = lines.filter(Boolean).slice();
 var seed;
 var rng = new Math.seedrandom();
 
@@ -236,7 +236,7 @@ function initAll() {
 
 function newCard() {
     rng = new Math.seedrandom(document.getElementById("seed").value);
-    linesCopy = lines.slice();
+    linesCopy = lines.filter(Boolean).slice();
     for (var i = 0; i < 24; i++) {
         setSquare(i);
     }
@@ -245,14 +245,13 @@ function newCard() {
 function setSquare(thisSquare) {
     var currentSquare = "square" + thisSquare;
 
-    var randomString = getRandomStringAndRemove();
+    var randomString = getRandomStringAndRemove(thisSquare);
     document.getElementById(currentSquare).innerHTML = randomString;
 }
 
-function getRandomStringAndRemove() {
-    var randomIndex = Math.floor(rng() * linesCopy.length) + 1;
+function getRandomStringAndRemove(thisSquare) {
+    var randomIndex = Math.floor(rng() * (linesCopy.length - thisSquare) ) + 1;
     var randomString = linesCopy.splice(randomIndex, 1);
-
     return randomString;
 }
 
