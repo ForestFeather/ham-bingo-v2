@@ -121,6 +121,24 @@ var generalRegions = [
     'ITU Region 3'
 ];
 
+var arrlDivisions = [
+    'Atlantic Division',
+    'Central Division',
+    'Dakota Division',
+    'Delta Division',
+    'Great Lakes Division',
+    'Hudson Division',
+    'Midwest Division',
+    'New England Division',
+    'Northwestern Division',
+    'Pacific Division',
+    'Roanoke Division',
+    'Rocky Mountain Division',
+    'Southeastern Division',
+    'Southwestern Division',
+    'West Gulf Division'
+];
+
 var continents = [
     'North America',
     'South America',
@@ -263,6 +281,7 @@ var listOfCategories = {
     'Region 9': region9,
     'Canada Regions': canadaRegions,
     'General Regions': generalRegions,
+    'ARRL Divisions': arrlDivisions,
     'Continents': continents,
     'Distances': distances,
     'Mode Counts': modeCounts,
