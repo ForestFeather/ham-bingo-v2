@@ -3,13 +3,16 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Collin 'KE0IYN' O'Connor - main developer - @meddeveloper
 
 # THANKS
 
-    <name>
+    Stillwater Amateur Radio Association
+    The Nano Overachievers
+    My YL, Kelly
+    The ARRL
 
 # TECHNOLOGY COLOPHON
 
-    CSS3, HTML5
+    CSS3, HTML5, Javascript
     Apache Server Configs, jQuery, Modernizr, Normalize.css
