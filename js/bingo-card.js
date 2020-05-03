@@ -315,7 +315,7 @@ var listOfCategories = {
     'Location Challenges': locationChallenges,
     'Club Challenges': clubChallenges,
     'Contact Counts': contactCounts,
-    'Timed Contact Counts': contactCountsTimed,
+    'Timed Counts': contactCountsTimed,
     'Station Classes': stationClasses,
     'Bonus Points': bonusPoints,
     'Social Points': socialPoints,
@@ -327,17 +327,17 @@ var linesCopy = buildLines();
 var seed;
 var rng = new Math.seedrandom();
 
-function buildLines() {
+function buildLines(custom=true, filterBy='') {
     var lines = [];
     for (var [key, value] of Object.entries(listOfCategories)) {
         var checkbox = document.getElementById(key);
-        if(checkbox == null || checkbox.checked == true) {
+        if(checkbox == null || checkbox.checked == true && ( filterBy == '' || key.includes(filterBy) ) ) {
             lines = lines.concat(value);
         }
     }
 
     // Add custom items, if enabled
-    if(document.getElementById("customItemsEnable").checked == true) {
+    if(custom == true && document.getElementById("customItemsEnable").checked == true) {
         var customItems = document.getElementById("customItems").value.split(',');
         lines = lines.concat(customItems);
     }
@@ -388,3 +388,146 @@ function anotherCard() {
 
     return false;
 }
+
+function generateComboCard() {
+    var count = 0;
+    var bands = document.getElementById("comboBands").checked == true;
+    var regions = document.getElementById("comboRegions").checked == true;
+    var counts = document.getElementById("comboContactCounts").checked == true;
+    var modes = document.getElementById("comboModes").checked == true;
+    var custom = document.getElementById("comboCustom").checked == true;
+    if ( bands ) count++;
+    if ( regions ) count++;
+    if ( counts ) count++;
+    if ( modes ) count++;
+    if ( custom ) count++;
+
+    if ( count < 2 || count > 3 ) {
+        alert("An invalid number of items have been selected.  Please adjust selections and try again.");
+        return false;
+    }
+
+    // Start building the lists
+    var comboList = [];
+    if ( regions ) comboList.push(buildLines(false,'Region'));
+    if ( bands ) { 
+        var tempBands = buildLines(false,'Bands');
+
+        for(var i = 0; i < tempBands.length; i++) { tempBands[i] = tempBands[i].replace('Contact on ',''); }
+
+        comboList.push(tempBands);
+    }
+    if ( counts ) comboList.push(['1 Contacts', '1 Contacts', '2 Contacts', '2 Contacts', '3 Contacts', '3 Contacts', '3 Contacts', '5 Contacts', '5 Contacts', '5 Contacts', '10 Contacts', '10 Contacts', '10 Contacts', '15 Contacts', '15 Contacts', '20 Contacts', '25 Contacts', '30 Contacts']);
+    if ( modes ) comboList.push(['CW', 'Voice', 'Digital']);
+    if ( custom ) comboList.push(buildLines(true,'#GARBAGE#'));
+
+    // Now to create the actual card list
+    linesCopy = combineArrays(comboList);
+
+    // And populate the card
+        for (var i = 0; i < 24; i++) {
+           setSquare(i);
+        }
+
+
+    document.getElementById("Card").scrollIntoView();
+
+    return false;
+}
+
+function combineArrays( array_of_arrays ){
+
+    // First, handle some degenerate cases...
+
+    if( ! array_of_arrays ){
+        // Or maybe we should toss an exception...?
+        return [];
+    }
+
+    if( ! Array.isArray( array_of_arrays ) ){
+        // Or maybe we should toss an exception...?
+        return [];
+    }
+
+    if( array_of_arrays.length == 0 ){
+        return [];
+    }
+
+    for( let i = 0 ; i < array_of_arrays.length; i++ ){
+        if( ! Array.isArray(array_of_arrays[i]) || array_of_arrays[i].length == 0 ){
+            // If any of the arrays in array_of_arrays are not arrays or zero-length, return an empty array...
+            return [];
+        }
+    }
+
+    // Done with degenerate cases...
+
+    // Start "odometer" with a 0 for each array in array_of_arrays.
+    let odometer = new Array( array_of_arrays.length );
+    odometer.fill( 0 );
+
+    let output = [];
+
+    let newCombination = formCombination( odometer, array_of_arrays );
+
+    output.push( newCombination );
+
+    while ( odometer_increment( odometer, array_of_arrays ) ){
+        newCombination = formCombination( odometer, array_of_arrays );
+        output.push( newCombination );
+    }
+
+    return output;
+}/* combineArrays() */
+
+
+// Translate "odometer" to combinations from array_of_arrays
+function formCombination( odometer, array_of_arrays ){
+    // In Imperative Programmingese (i.e., English):
+     let s_output = "";
+     for( let i=0; i < odometer.length; i++ ){
+        s_output += (i == 0 ? "" : "<br />" ) + array_of_arrays[i][odometer[i]];
+     }
+     return s_output;
+
+    // In Functional Programmingese (Henny Youngman one-liner):
+    //return odometer.reduce(
+    //  function(accumulator, odometer_value, odometer_index){
+    //    return "" + accumulator + array_of_arrays[odometer_index][odometer_value];
+    //  },
+    //  ""
+    //);
+}/* formCombination() */
+
+function odometer_increment( odometer, array_of_arrays ){
+
+    // Basically, work you way from the rightmost digit of the "odometer"...
+    // if you're able to increment without cycling that digit back to zero,
+    // you're all done, otherwise, cycle that digit to zero and go one digit to the
+    // left, and begin again until you're able to increment a digit
+    // without cycling it...simple, huh...?
+
+    for( let i_odometer_digit = odometer.length-1; i_odometer_digit >=0; i_odometer_digit-- ){
+
+        let maxee = array_of_arrays[i_odometer_digit].length - 1;
+
+        if( odometer[i_odometer_digit] + 1 <= maxee ){
+            // increment, and you're done...
+            odometer[i_odometer_digit]++;
+            return true;
+        }
+        else{
+            if( i_odometer_digit - 1 < 0 ){
+                // No more digits left to increment, end of the line...
+                return false;
+            }
+            else{
+                // Can't increment this digit, cycle it to zero and continue
+                // the loop to go over to the next digit...
+                odometer[i_odometer_digit]=0;
+                continue;
+            }
+        }
+    }/* for( let odometer_digit = odometer.length-1; odometer_digit >=0; odometer_digit-- ) */
+
+}/* odometer_increment() */
