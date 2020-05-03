@@ -309,6 +309,12 @@ function buildLines() {
             lines = lines.concat(value);
         }
     }
+
+    // Add custom items, if enabled
+    if(document.getElementById("customItemsEnable").checked == true) {
+        var customItems = document.getElementById("customItems").value.split(',');
+        lines = lines.concat(customItems);
+    }
     
     return lines.filter(Boolean).slice();
 }
