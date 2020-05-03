@@ -180,17 +180,27 @@ var modeCounts = [
     'Make 5 satellite contacts'
 ];
 
-var bands = [
+var bandsHF = [
     'Contact on 160m',
     'Contact on 80m',
     'Contact on 40m',
     'Contact on 20m',
     'Contact on 15m',
-    'Contact on 10m',
+    'Contact on 10m'
+];
+
+var bandsUHFVHF = [
     'Contact on 6m',
     'Contact on 2m',
     'Contact on 1.25m',
     'Contact on 70cm'
+];
+
+var bandsWARC = [
+    'Contact on 60m',
+    'Contact on 30m',
+    'Contact on 17m',
+    'Contact on 12m'
 ];
 
 var specialProtocols = [
@@ -230,13 +240,26 @@ var clubChallenges = [
 ];
 
 var contactCounts = [
-    'Make 5 contacts in 10 minutes',
-    'Make 10 contacts in 10 minutes',
-    'Make 30 contacts in an hour',
-    'Make 100 contacts in 3 hours',
-    'Make 300 contacts in 6 hours',
-    'Make 500 contacts in 8 hours',
-    'make 1000 contacts in 24 hours'
+    '1 Contact',
+    '2 Contacts',
+    '5 Contacts',
+    '10 Contacts',
+    '15 Contacts',
+    '20 Contacts',
+    '25 Contacts',
+    '50 Contacts',
+    '75 Contacts',
+    '100 Contacts'
+];
+
+var contactCountsTimed = [
+    '5 contacts in 10 minutes',
+    '10 contacts in 10 minutes',
+    '30 contacts in an hour',
+    '100 contacts in 3 hours',
+    '300 contacts in 6 hours',
+    '500 contacts in 8 hours',
+    '1000 contacts in 24 hours'
 ];
 
 var stationClasses = [
@@ -285,11 +308,14 @@ var listOfCategories = {
     'Continents': continents,
     'Distances': distances,
     'Mode Counts': modeCounts,
-    'Bands': bands,
+    'HF Bands': bandsHF,
+    'VHF/UHF Bands': bandsUHFVHF,
+    'WARC Bands': bandsWARC,
     'Special Protocols': specialProtocols,
     'Location Challenges': locationChallenges,
     'Club Challenges': clubChallenges,
     'Contact Counts': contactCounts,
+    'Timed Contact Counts': contactCountsTimed,
     'Station Classes': stationClasses,
     'Bonus Points': bonusPoints,
     'Social Points': socialPoints,
