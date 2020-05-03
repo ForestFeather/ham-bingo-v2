@@ -2,10 +2,20 @@
     display: none !important;
 }
 
-#content, table {
+.content-wrapper {
+    position: absolute;
+    top: 0;
+}
+
+.content {
     width: 100%;
     margin: 0;
     float: none;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
 }
 
 body {
@@ -13,14 +23,14 @@ body {
 }
 
 td {
-    width: 20%;
+    width: 15%;
     position: relative;
 }
 
 td:after {
     content: '';
     display: block;
-    margin-top: 100%;
+    margin-top: 75%;
 }
 
 td .cell-content {
@@ -30,3 +40,4 @@ td .cell-content {
     left: 0;
     right: 0;
 }
+
