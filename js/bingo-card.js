@@ -424,6 +424,12 @@ function generateComboCard() {
     // Now to create the actual card list
     linesCopy = combineArrays(comboList);
 
+    // Make sure we have enouch combos
+    if ( linesCopy.length < 24 ) {
+        alert("Your chosen combination of categories do not have enough combinations to fill a bingo card.  Please select more items.");
+        return false;
+    }
+
     // And populate the card
         for (var i = 0; i < 24; i++) {
            setSquare(i);
