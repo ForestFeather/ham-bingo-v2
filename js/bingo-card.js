@@ -363,6 +363,12 @@ function initAll() {
 function newCard() {
     rng = new Math.seedrandom(document.getElementById("seed").value);
     linesCopy = buildLines();
+
+    if ( linesCopy.length < 24 ) {
+        alert("You do not have enough items selected to generate a full bingo card.  Please add more selections and try again.");
+        return false;
+    }
+
     for (var i = 0; i < 24; i++) {
         setSquare(i);
     }
