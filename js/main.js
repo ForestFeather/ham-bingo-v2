@@ -72,7 +72,9 @@ function checkAll(checktoggle) {
 
   for (var i=0; i<checkboxes.length; i++)  {
     if (checkboxes[i].type == 'checkbox')   {
-      checkboxes[i].checked = checktoggle;
+      if(!checkboxes[i].classList.contains('noselect')) {
+        checkboxes[i].checked = checktoggle;
+      }
     }
   }
 }
