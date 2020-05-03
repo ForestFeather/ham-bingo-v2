@@ -118,11 +118,8 @@
                 <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
                     <div class='l-box'>
                         <h3 class='content-head-ribbon'>Seed</h3>
-                        <input id='seed' name='seed' type='text' style="width: 6em" placeholder='Seed Value'></input>
+                        <input id='seed' name='seed' type='text' style="width: 7em" placeholder='Seed Value'></input>
                         <button id='generateSeed' class='pure-button' onclick="newSeed();">New Seed</button>
-                        <div class='l-box'>
-                            <button id='anotherCard' class='pure-button' onclick="anotherCard();">New Card With Settings</button>
-                        </div>
                     </div>
                 </div>
                 <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
@@ -144,6 +141,26 @@
                         </ul>
                     </div>
                 </div>
+                <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
+                    <div class='l-box'>
+                        <button class='pure-button' onclick="anotherCard();">New Card (Same Seed)</button>
+                    </div>
+                </div>
+                <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
+                     <div class='l-box'>
+                         <button class='pure-button' onclick="newSeed();anotherCard();">New Card (New Seed)</button>
+                     </div>
+                 </div>
+                 <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
+                     <div class='l-box'>
+                         <button class='pure-button' onclick="checkAll(false);">Uncheck All</button>
+                     </div>
+                 </div>
+                 <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
+                     <div class='l-box'>
+                         <button class='pure-button' onclick="checkAll(true);">Check All</button>
+                     </div>
+                 </div>
             </div>
             <div class="ribbon l-box-lrg no-print">
                 <div class="pure-g">
