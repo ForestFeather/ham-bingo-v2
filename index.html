@@ -118,8 +118,8 @@
                     </div>
                 </div>
             </div>
-            <div class="ribbon pure-g no-print" id="settingsGroups">
-                <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
+            <div class="ribbon pure-g no-print">
+                <div class='pure-u-1'>
                     <div class='l-box'>
                         <h3 class='content-head-ribbon'>Settings</h3>
                         <label class='content-head-ribbon' for='seed'>Seed</label> 
@@ -128,6 +128,19 @@
                     </div>
                     <div class='l-box'>
                         <button id='anotherCard' class='pure-button' onclick="anotherCard();">New Card With Settings</button>
+                    </div>
+                    <div class='l-box'>
+                        <h3 class='content-head-ribbon'>Categories</h3>
+                        <ul id='settingsList' class='no-list-style column-list'>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="ribbon pure-g no-print" id="settingsGroups">
+                <div class='pure-u-1'>
+                    <div class='l-box'>
+                        <h2 class='content-head-ribbon'>Category Lists</h2>
+                        <p>Below lists out all the possible items in each category that could appear in your bingo card.  New suggestions are welcome, see footer for contact information!</p>
                     </div>
                 </div>
             </div>
@@ -143,7 +156,7 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <script type="text/javascript" src="js/bingo-card.js"></script>
-        <script>printLists(); initAll();</script>
+        <script>printLists(); printCheckboxes(listOfCategories); initAll();</script>
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <script>

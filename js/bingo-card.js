@@ -103,7 +103,7 @@ var canadaRegions = [
     'MAR Maritime',
     'NL Newfoundland / Labrador',
     'PE Prince Edward Island',
-    'qC Quebec',
+    'QC Quebec',
     'ONN Ontario North',
     'ONS Ontario South',
     'ONE Ontario East',

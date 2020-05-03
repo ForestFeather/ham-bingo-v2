@@ -1,5 +1,5 @@
 function makeList(arrayName, arrayObjects) { 
-    
+
     // Make a container element for the list
     var listContainer = document.createElement('div');
     listContainer.classList.add('pure-u-1-4');
@@ -15,7 +15,7 @@ function makeList(arrayName, arrayObjects) {
     header.innerText = arrayName;
 
     // Create checkbox
-    var checkbox = document.createElement('input');
+    /*var checkbox = document.createElement('input');
     var label = document.createElement('label');
     var labelText = document.createTextNode(' Enabled');
     label.classList.add('pure-checkbox');
@@ -23,13 +23,13 @@ function makeList(arrayName, arrayObjects) {
     label.htmlFor = arrayName;
     checkbox.id = arrayName;
     checkbox.type = 'checkbox';
-    checkbox.checked = true;
+    checkbox.checked = true;*/
 
     // Add checkbox and header
     lbox.appendChild(header);
-    label.appendChild(checkbox);
-    label.appendChild(labelText);
-    lbox.appendChild(label);
+    //label.appendChild(checkbox);
+    //label.appendChild(labelText);
+    //lbox.appendChild(label);
 
     // Make the list
     var listElement = document.createElement('ul');
@@ -49,6 +49,29 @@ function makeList(arrayName, arrayObjects) {
 
     // Finally, put on the document
     document.getElementById('settingsGroups').appendChild(listContainer);
+}
+
+function printCheckboxes(dictionary) {
+    for (var [key, value] of Object.entries(dictionary)) {
+        // Create checkbox
+        var listItem = document.createElement('li');
+        var checkbox = document.createElement('input');
+        var label = document.createElement('label');
+        var labelText = document.createTextNode(' ' + key);
+        listItem.classList.add('column-list');
+        label.classList.add('pure-checkbox');
+        label.classList.add('content-head-ribbon');
+        label.htmlFor = key;
+        checkbox.id = key;
+        checkbox.type = 'checkbox';
+        checkbox.checked = true;
+
+        // Add checkbox and header
+        label.appendChild(checkbox);
+        label.appendChild(labelText);
+        listItem.appendChild(label);
+        document.getElementById('settingsList').appendChild(listItem);
+    }
 }
 
 function printLists() {
