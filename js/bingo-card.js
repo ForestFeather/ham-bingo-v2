@@ -423,7 +423,7 @@ function generateComboCard() {
 
         comboList.push(tempBands);
     }
-    if ( counts ) comboList.push(['1 Contacts', '1 Contacts', '2 Contacts', '2 Contacts', '3 Contacts', '3 Contacts', '3 Contacts', '5 Contacts', '5 Contacts', '5 Contacts', '10 Contacts', '10 Contacts', '10 Contacts', '15 Contacts', '15 Contacts', '20 Contacts', '25 Contacts', '30 Contacts']);
+    if ( counts ) comboList.push(['1 Contact', '1 Contact', '2 Contacts', '2 Contacts', '3 Contacts', '3 Contacts', '3 Contacts', '5 Contacts', '5 Contacts', '5 Contacts', '10 Contacts', '10 Contacts', '10 Contacts', '15 Contacts', '15 Contacts', '20 Contacts', '25 Contacts', '30 Contacts']);
     if ( modes ) comboList.push(['CW', 'Voice', 'Digital']);
     if ( custom ) comboList.push(buildLines(true,'#GARBAGE#'));
 
