@@ -352,5 +352,7 @@ function getRandomStringAndRemove(thisSquare) {
 function anotherCard() {
     newCard();
 
+    document.getElementById("Card").scrollIntoView();
+
     return false;
 }

@@ -2,7 +2,9 @@ function makeList(arrayName, arrayObjects) {
 
     // Make a container element for the list
     var listContainer = document.createElement('div');
-    listContainer.classList.add('pure-u-1-4');
+    listContainer.classList.add('pure-u-1');
+    listContainer.classList.add('pure-u-md-1-2');
+    listContainer.classList.add('pure-u-lg-1-4');
 
     // Add the list box group
     var lbox = document.createElement('div');
@@ -13,23 +15,7 @@ function makeList(arrayName, arrayObjects) {
     var header = document.createElement('h3');
     header.classList.add( 'content-head-ribbon');
     header.innerText = arrayName;
-
-    // Create checkbox
-    /*var checkbox = document.createElement('input');
-    var label = document.createElement('label');
-    var labelText = document.createTextNode(' Enabled');
-    label.classList.add('pure-checkbox');
-    label.classList.add('content-head-ribbon');
-    label.htmlFor = arrayName;
-    checkbox.id = arrayName;
-    checkbox.type = 'checkbox';
-    checkbox.checked = true;*/
-
-    // Add checkbox and header
     lbox.appendChild(header);
-    //label.appendChild(checkbox);
-    //label.appendChild(labelText);
-    //lbox.appendChild(label);
 
     // Make the list
     var listElement = document.createElement('ul');
