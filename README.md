@@ -8,6 +8,7 @@ There are many planned improvements at this time, including:
 * Addition of a generated 'tag' or 'key' that can be copied and shared for generation/recall of identical cards
 * Addition of a text area to upload ADIF for confirmation of bingo on a given bingo card
 * Ability to 'click' on a card tile to mark and unmark a card
+* More?
 
 # Code Used
 I would like to acknowledge with many thanks some other projects and resources that helped make this possible:
