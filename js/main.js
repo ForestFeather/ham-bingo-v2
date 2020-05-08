@@ -9,6 +9,8 @@ function makeList(arrayName, arrayObjects) {
     // Add the list box group
     var lbox = document.createElement('div');
     lbox.classList.add('l-box');
+    lbox.classList.add('content-item');
+    lbox.classList.add('content-settingsGroups');
     listContainer.appendChild(lbox);
 
     // Make the header object
@@ -78,3 +80,10 @@ function checkAll(checktoggle) {
     }
   }
 }
+
+$(function() {
+    $('.expand-settingsGroups').click(function(){
+        $('.content-settingsGroups').slideToggle('slow');
+        $('.expand-settingsGroups').toggleClass('expand-item-active');
+    });
+});
