@@ -303,6 +303,32 @@ td:after {
                break-inside: avoid;
 }
 
+/* Collapsible sections */
+.expand-item a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.expand-item a:hover {
+    cursor: pointer;
+}
+
+.expand-item a:before {
+  content: "\02795\0020"; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: left;
+  margin-right: 5px;
+}
+
+.expand-item-active a:before {
+    content: "\2796\0020"; /* Unicode character for "minus" sign (-) */
+}
+
+.content-item {
+    display: none;
+}
+
    /*
     *  * -- DESKTOP (AND UP) MEDIA QUERIES --
     *   * On desktops and other large devices, we want to over-ride some
