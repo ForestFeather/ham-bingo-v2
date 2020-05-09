@@ -1,4 +1,8 @@
 var region0 = [
+    'US General',
+'',
+'',
+'',
     'MN Minnesota',
     'IA Iowa',
     'CO Colorado',
@@ -10,6 +14,10 @@ var region0 = [
 ];
 
 var region1 = [
+    'US General',
+'',
+'',
+'',
     'CT Connecticut',
     'EMA Eastern Massachusetts',
     'WMA Western Massachusetts',
@@ -20,6 +28,10 @@ var region1 = [
 ];
 
 var region2 = [
+    'US General',
+'',
+'',
+'',
     'ENY Eastern New York',
     'NLI New York City - Long Island',
     'NNJ Northern New Jersey',
@@ -29,13 +41,21 @@ var region2 = [
 ];
 
 var region3 = [
-    'DE Delaware',
+    'US General',
+    '',
+'',
+'',
+'DE Delaware',
     'EPA Eastern Pennsylvania',
     'MDC Maryland - DC',
     'WPA Western Pennsylvania'
 ];
 
 var region4 = [
+    'US General',
+'',
+'',
+'',
     'AL Alabama',
     'GA Georgia',
     'KY Kentucky',
@@ -51,6 +71,10 @@ var region4 = [
 ];
 
 var region5 = [
+    'US General',
+'',
+'',
+'',
     'AK Arkansas',
     'LA Louisiana',
     'MS Mississippi',
@@ -62,6 +86,10 @@ var region5 = [
 ];
 
 var region6 = [
+    'US General',
+'',
+'',
+'',
     'EB East Bay',
     'LAX Los Angeles',
     'ORG Orange County',
@@ -75,6 +103,10 @@ var region6 = [
 ];
 
 var region7 = [
+    'US General',
+'',
+'',
+'',
     'AZ Arizona',
     'EWA Eastern Washington',
     'ID Idaho',
@@ -88,18 +120,30 @@ var region7 = [
 ];
 
 var region8 = [
+    'US General',
+'',
+'',
+'',
     'MI Michigan',
     'OH Ohio',
     'WV West Virginia'
 ];
 
 var region9 = [
+    'US General',
+'',
+'',
+'',
     'IL Illinois',
     'IN Indiana',
     'WI Wisconsin'
 ];
 
 var canadaRegions = [
+    'General FieldDay Region',
+'',
+'',
+'',
     'MAR Maritime',
     'NL Newfoundland / Labrador',
     'PE Prince Edward Island',
@@ -116,12 +160,20 @@ var canadaRegions = [
 ];
 
 var generalRegions = [
+    'General Global',
+'',
+'',
+'',
     'ITU Region 1',
     'ITU Region 2',
     'ITU Region 3'
 ];
 
 var arrlDivisions = [
+    'General',
+'',
+'',
+'',
     'Atlantic Division',
     'Central Division',
     'Dakota Division',
@@ -140,6 +192,10 @@ var arrlDivisions = [
 ];
 
 var continents = [
+    'General',
+'',
+'',
+'',
     'North America',
     'South America',
     'Europe',
@@ -149,6 +205,10 @@ var continents = [
 ];
 
 var distances = [
+    'General',
+'',
+'',
+'',
     'Contact 1-5 Miles Away',
     'Contact 5-15 Miles Away',
     'Contact 15-40 Miles Away',
@@ -168,6 +228,10 @@ var distances = [
 ];
 
 var modeCounts = [
+    'General',
+'',
+'',
+'',
     'Make 1 CW contact',
     'Make 5 CW contacts',
     'Make 1 SSB contact',
@@ -181,6 +245,10 @@ var modeCounts = [
 ];
 
 var bandsHF = [
+    'Bands General FieldDay',
+'',
+'',
+'',
     'Contact on 160m',
     'Contact on 80m',
     'Contact on 40m',
@@ -190,6 +258,10 @@ var bandsHF = [
 ];
 
 var bandsUHFVHF = [
+    'Bands General FieldDay',
+'',
+'',
+'',
     'Contact on 6m',
     'Contact on 2m',
     'Contact on 1.25m',
@@ -197,6 +269,10 @@ var bandsUHFVHF = [
 ];
 
 var bandsWARC = [
+    'Bands General',
+'',
+'',
+'',
     'Contact on 60m',
     'Contact on 30m',
     'Contact on 17m',
@@ -204,6 +280,10 @@ var bandsWARC = [
 ];
 
 var specialProtocols = [
+    'General FieldDay',
+'',
+'',
+'',
     'Contact with CW',
     'Contact with AM',
     'Contact with SSB',
@@ -215,6 +295,10 @@ var specialProtocols = [
 ];
 
 var locationChallenges = [
+    'General FieldDay',
+'',
+'',
+'',
     'Contact with Maritime station',
     'Contact with Mobile station',
     'Contact with Aeronautical station',
@@ -230,6 +314,7 @@ var locationChallenges = [
 ];
 
 var clubChallenges = [
+    'FieldDay General',
     'Contact with 1 club member',
     'Contact with 5 club members',
     'Contact with 10 club members',
@@ -240,6 +325,10 @@ var clubChallenges = [
 ];
 
 var contactCounts = [
+    'General',
+'',
+'',
+'',
     '1 Contact',
     '2 Contacts',
     '5 Contacts',
@@ -253,6 +342,10 @@ var contactCounts = [
 ];
 
 var contactCountsTimed = [
+    'General',
+'',
+'',
+'',
     '5 contacts in 10 minutes',
     '10 contacts in 10 minutes',
     '30 contacts in an hour',
@@ -263,7 +356,11 @@ var contactCountsTimed = [
 ];
 
 var stationClasses = [
-    'Contact with a Class A station',
+    'FieldDay',
+    '',
+'',
+'',
+'Contact with a Class A station',
     'Contact with a Class B station',
     'Contact with a Class C station',
     'Contact with a Class D station',
@@ -273,6 +370,10 @@ var stationClasses = [
 ];
 
 var bonusPoints = [
+    'FieldDay',
+    '',
+'',
+'',
     'Use 100% Emergency Power',
     'Originate a Formal Message to Section Manager',
     'Relay a formal message',
@@ -286,24 +387,28 @@ var bonusPoints = [
 ];
 
 var socialPoints = [
+    'FieldDay COVID NoCheck',
+    '',
+    '',
+    '',
     'Obtain publicity from local media',
     'Operate from a public location',
     'Provide public information'
 ];
 
 var listOfCategories = {
-    'Region 0': region0,
-    'Region 1': region1,
-    'Region 2': region2,
-    'Region 3': region3,
-    'Region 4': region4,
-    'Region 5': region5,
-    'Region 6': region6,
-    'Region 7': region7,
-    'Region 8': region8,
-    'Region 9': region9,
-    'Canada Regions': canadaRegions,
-    'General Regions': generalRegions,
+    'US Call District 0': region0,
+    'US Call District 1': region1,
+    'US Call District 2': region2,
+    'US Call District 3': region3,
+    'US Call District 4': region4,
+    'US Call District 5': region5,
+    'US Call District 6': region6,
+    'US Call District 7': region7,
+    'US Call District 8': region8,
+    'US Call District 9': region9,
+    'Canada Call District': canadaRegions,
+    'General Areas': generalRegions,
     'ARRL Divisions': arrlDivisions,
     'Continents': continents,
     'Distances': distances,
@@ -332,7 +437,7 @@ function buildLines(custom=true, filterBy='') {
     for (var [key, value] of Object.entries(listOfCategories)) {
         var checkbox = document.getElementById(key);
         if(checkbox == null || checkbox.checked == true && ( filterBy == '' || key.includes(filterBy) ) ) {
-            lines = lines.concat(value);
+            lines = lines.concat(value.slice(4));
         }
     }
 
@@ -341,7 +446,7 @@ function buildLines(custom=true, filterBy='') {
         var customItems = document.getElementById("customItems").value.split(',');
         lines = lines.concat(customItems);
     }
-    
+
     return lines.filter(Boolean).slice();
 }
 
@@ -415,7 +520,7 @@ function generateComboCard() {
 
     // Start building the lists
     var comboList = [];
-    if ( regions ) comboList.push(buildLines(false,'Region'));
+    if ( regions ) comboList.push(buildLines(false,'Call District'));
     if ( bands ) { 
         var tempBands = buildLines(false,'Bands');
 
@@ -437,9 +542,9 @@ function generateComboCard() {
     }
 
     // And populate the card
-        for (var i = 0; i < 24; i++) {
-           setSquare(i);
-        }
+    for (var i = 0; i < 24; i++) {
+        setSquare(i);
+    }
 
 
     document.getElementById("Card").scrollIntoView();
@@ -496,11 +601,11 @@ function combineArrays( array_of_arrays ){
 // Translate "odometer" to combinations from array_of_arrays
 function formCombination( odometer, array_of_arrays ){
     // In Imperative Programmingese (i.e., English):
-     let s_output = "";
-     for( let i=0; i < odometer.length; i++ ){
+    let s_output = "";
+    for( let i=0; i < odometer.length; i++ ){
         s_output += (i == 0 ? "" : "<br />" ) + array_of_arrays[i][odometer[i]];
-     }
-     return s_output;
+    }
+    return s_output;
 
     // In Functional Programmingese (Henny Youngman one-liner):
     //return odometer.reduce(

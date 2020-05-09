@@ -22,9 +22,9 @@ function makeList(arrayName, arrayObjects) {
     // Make the list
     var listElement = document.createElement('ul');
 
-    // Add it to the page
+    // Add it to the page.  Start at 4 to bypass settings in array
     lbox.appendChild(listElement);
-    for (i = 0; i < arrayObjects.length; ++i) {
+    for (i = 4; i < arrayObjects.length; ++i) {
         // create an item for each one
         listItem = document.createElement('li');
 
