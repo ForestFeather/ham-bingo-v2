@@ -234,8 +234,8 @@ a.pure-button-primary {
 /* We decrease the width of the .splash, since we have more width
  *     to work with */
 /*.splash {
-    width: 70%;
-    height: 20%;
+width: 70%;
+height: 20%;
 }*/
 
 .splash-head {
@@ -281,6 +281,16 @@ td:after {
 
 .cell-content {
     font-size: 4vh;
+    -webkit-transition: background 0.5s linear;
+    -moz-transition: background 0.5s linear;
+    -ms-transition: background 0.5s linear;
+    -o-transition: background 0.5s linear;
+    transition: background 0.5s linear;
+    background-color: inherit;
+}
+
+.cell-content.bingoSelected {
+    background-color: #85c78a;
 }
 
 .no-list-style {
@@ -298,9 +308,9 @@ td:after {
 }
 
 .column-list li {
--webkit-column-break-inside: avoid;
-          page-break-inside: avoid;
-               break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
 }
 
 /* Collapsible sections */
@@ -314,11 +324,11 @@ td:after {
 }
 
 .expand-item a:before {
-  content: "\02795\0020"; /* Unicode character for "plus" sign (+) */
-  font-size: 13px;
-  color: white;
-  float: left;
-  margin-right: 5px;
+    content: "\02795\0020"; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: left;
+    margin-right: 5px;
 }
 
 .expand-item-active a:before {
@@ -329,21 +339,21 @@ td:after {
     display: none;
 }
 
-   /*
-    *  * -- DESKTOP (AND UP) MEDIA QUERIES --
-    *   * On desktops and other large devices, we want to over-ride some
-    *    * of the mobile and tablet styles.
-    *     */
-   @media (min-width: 78em) {
-       /* We increase the header font size even more */
-       .splash-head {
-           font-size: 300%;
-       }
+/*
+ *  * -- DESKTOP (AND UP) MEDIA QUERIES --
+ *   * On desktops and other large devices, we want to over-ride some
+ *    * of the mobile and tablet styles.
+ *     */
+@media (min-width: 78em) {
+    /* We increase the header font size even more */
+    .splash-head {
+        font-size: 300%;
+    }
 
-     .pure-table td {
-         padding: 0.5em;
-         font-size: 1.4vw;
-         line-height: 1.5vw;
-     }
-   }
+    .pure-table td {
+        padding: 0.5em;
+        font-size: 1.4vw;
+        line-height: 1.5vw;
+    }
+}
 

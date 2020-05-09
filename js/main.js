@@ -86,4 +86,7 @@ $(function() {
         $('.content-settingsGroups').slideToggle('slow');
         $('.expand-settingsGroups').toggleClass('expand-item-active');
     });
+    $('.cell-content').click(function() {
+        $(this).toggleClass('bingoSelected');    
+    });
 });
