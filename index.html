@@ -110,39 +110,41 @@
                 </div>
             </div>
             <div class="ribbon pure-g no-print">
-                <div class='pure-u-1'>
-                    <div class='l-box'>
-                        <h2 class='content-head-ribbon'>Settings</h2>
-                    </div>
-                </div>
-                <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
-                    <div class='l-box'>
-                        <h3 class='content-head-ribbon'>Seed</h3>
-                        <input id='seed' name='seed' type='text' style="width: 7em" placeholder='Seed Value'></input>
-                        <button id='generateSeed' class='pure-button' onclick="newSeed();">New Seed</button>
-                    </div>
-                </div>
-                <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
-                    <div class='l-box'>
-                        <h3 class='content-head-ribbon'>Custom Items</h3>
-                        <label class='content-head-ribbon pure-checkbox' for='customItemsEnable'>
-                            <input id='customItemsEnable' type='checkbox' class='noselect'></input>
-                            Enable
-                        </label>                  
-                        <div>
-                            <input id='customItems' type='text' placeholder='Comma Separated Values'></input>
+                <form id="SettingsForm">
+                    <div class='pure-u-1'>
+                        <div class='l-box'>
+                            <h2 class='content-head-ribbon'>Settings</h2>
                         </div>
                     </div>
-                </div>
-                <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
-                    <div class='l-box'>
-                        <h3 class='content-head-ribbon'>Combinations</h3>
-                        <p>Pick 2 or 3 - Create Combinations like PR Puerto Rico - 20m or OH Ohio - 80m - 5 Contacts. Region and band selections come from 'categories' list.</p>
+                    <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
+                        <div class='l-box'>
+                            <h3 class='content-head-ribbon'>Seed</h3>
+                            <input id='seed' name='seed' type='text' style="width: 7em" placeholder='Seed Value'></input>
+                            <button id='generateSeed' class='pure-button' onclick="newSeed();">New Seed</button>
+                        </div>
                     </div>
-                    <div class='l-box'>
-                        <button class='pure-button' onclick="generateComboCard();">Generate Combo Card</button>
+                    <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
+                        <div class='l-box'>
+                            <h3 class='content-head-ribbon'>Custom Items</h3>
+                            <label class='content-head-ribbon pure-checkbox' for='customItemsEnable'>
+                                <input id='customItemsEnable' type='checkbox' class='noselect'></input>
+                                Enable
+                            </label>                  
+                            <div>
+                                <input id='customItems' type='text' placeholder='Comma Separated Values'></input>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
+                        <div class='l-box'>
+                            <h3 class='content-head-ribbon'>Combinations</h3>
+                            <p>Pick 2 or 3 - Create Combinations like PR Puerto Rico - 20m or OH Ohio - 80m - 5 Contacts. Region and band selections come from 'categories' list.</p>
+                        </div>
+                        <div class='l-box'>
+                            <button class='pure-button' onclick="generateComboCard();">Generate Combo Card</button>
+                        </div>
+                    </div>
+                </form>
                 <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
                     <div class'l-box'>
                         <h3 class='content-head-ribboni'>&nbsp;</h3>
@@ -181,26 +183,32 @@
                         </ul>
                     </div>
                 </div>
-                <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
+                <div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-4 pure-u-lg-1-6 pure-u-xl-1-8'>
                     <div class='l-box'>
                         <button class='pure-button' onclick="anotherCard();">New Card (Same Seed)</button>
                     </div>
                 </div>
-                <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
+                <div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-4 pure-u-lg-1-6 pure-u-xl-1-8'>
                     <div class='l-box'>
                         <button class='pure-button' onclick="newSeed();anotherCard();">New Card (New Seed)</button>
                     </div>
                 </div>
-                <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
+                <div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-4 pure-u-lg-1-6 pure-u-xl-1-8'>
                     <div class='l-box'>
                         <button class='pure-button' onclick="checkAll(false);">Uncheck All</button>
                     </div>
                 </div>
-                <div class='pure-u-1 pure-u-md-1-2 pure-u-lg-1-4'>
+                <div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-4 pure-u-lg-1-6 pure-u-xl-1-8'>
                     <div class='l-box'>
                         <button class='pure-button' onclick="checkAll(true);">Check All</button>
                     </div>
                 </div>
+                <div class='pure-u-1 pure-u-sm-1-2 pure-u-md-1-4 pure-u-lg-1-6 pure-u-xl-1-8'>
+                       <div class='l-box'>
+                           <button class='pure-button' id='serialize'>Get Code</button>
+                           <a href='' id='serializeCode'>No Code Yet!</a>
+                       </div>
+                   </div>
             </div>
             <div class="ribbon l-box-lrg no-print">
                 <div class="pure-g">
@@ -249,10 +257,10 @@
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165441728-1"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-gtag('config', 'UA-165441728-1');
+            gtag('config', 'UA-165441728-1');
         </script>
 
     </body>
