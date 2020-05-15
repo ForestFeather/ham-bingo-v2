@@ -21,3 +21,6 @@ I would like to acknowledge with many thanks some other projects and resources t
 
 # Many Thanks
 Aside from the code used above, I also wish to thank my friends for putting up with my crazy ideas, listening to me rant as I work on this project, and encouraging me even when they have no idea what ham radio is.  Additionally, a huge thanks to the Stillwater Amateur Radio Association, because without them I'd never be a ham and this idea would never have been born.
+
+# Support?
+Like ham-radio-bingo.com and the work I'm doing?  Feel free to buy me a coffee or something! https://ko-fi.com/ke0iyn
