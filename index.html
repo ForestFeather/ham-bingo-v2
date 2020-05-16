@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/pure-min.css">
         <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css" />
         <link rel="stylesheet" href="css/marketing.css">
         <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
 
@@ -240,8 +241,15 @@
             </div>
         </div>
 
+        <div id="dialog" title="Save Link">
+            <p>This field will have the link you need to save to share with other hams!  Copy it, bookmark it, or send it around!</p>
+            <input id="saveLinkTarget" type="text" />
+            <button onclick="copyToClipboard($('#saveLinkTarget').val())">Copy to Clipboard</button>
+        </div>
+
         <script src="js/vendor/modernizr-3.8.0.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
         <script src="js/seedrandom.min.js"></script>
         <script src="js/plugins.js"></script>

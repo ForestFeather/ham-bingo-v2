@@ -69,32 +69,60 @@ function printLists() {
 }
 
 function checkAll(checktoggle) {
-  var checkboxes = new Array();
-  checkboxes = document.getElementsByTagName('input');
+    var checkboxes = new Array();
+    checkboxes = document.getElementsByTagName('input');
 
-  for (var i=0; i<checkboxes.length; i++)  {
-    if (checkboxes[i].type == 'checkbox')   {
-      if(!checkboxes[i].classList.contains('noselect')) {
-        checkboxes[i].checked = checktoggle;
-      }
+    for (var i=0; i<checkboxes.length; i++)  {
+        if (checkboxes[i].type == 'checkbox')   {
+            if(!checkboxes[i].classList.contains('noselect')) {
+                checkboxes[i].checked = checktoggle;
+            }
+        }
     }
-  }
 }
 
+const copyToClipboard = str => {
+  const el = document.createElement('textarea');  // Create a <textarea> element
+  el.value = str;                                 // Set its value to the string that you want copied
+  el.setAttribute('readonly', '');                // Make it readonly to be tamper-proof
+  el.style.position = 'absolute';
+  el.style.left = '-9999px';                      // Move outside the screen to make it invisible
+  document.body.appendChild(el);                  // Append the <textarea> element to the HTML document
+  const selected =
+    document.getSelection().rangeCount > 0        // Check if there is any content selected previously
+      ? document.getSelection().getRangeAt(0)     // Store selection if found
+      : false;                                    // Mark as false to know no selection existed before
+  el.select();                                    // Select the <textarea> content
+  document.execCommand('copy');                   // Copy - only works as a result of a user action (e.g. click events)
+  document.body.removeChild(el);                  // Remove the <textarea> element
+  if (selected) {                                 // If a selection existed before copying
+    document.getSelection().removeAllRanges();    // Unselect everything on the HTML document
+    document.getSelection().addRange(selected);   // Restore the original selection
+  }
+};
+
+/* function copyToClipboard(element) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+} */
+
 function generateStaticCode() {
-           values = $("#SettingsForm").serializeArray();
+    values = $("#SettingsForm").serializeArray();
 
-           values = values.concat(
-               jQuery('#SettingsForm input[type=checkbox]:not(:checked)').map(
-                   function() {
-                       return {"name": this.id, "value": 'off'}
-                   }).get()
-           );
-           values = jQuery.param( values );
+    values = values.concat(
+        jQuery('#SettingsForm input[type=checkbox]:not(:checked)').map(
+            function() {
+                return {"name": this.id, "value": 'off'}
+            }).get()
+    );
+    values = jQuery.param( values );
 
-         $('#serializeCode').attr("href","?" + values);
-           $('#serializeCode').text("Generated!");
+    var url = window.location.href.split('?')[0];
 
+    $('#saveLinkTarget').val(url + "?" + values);
 }
 
 $(function() {
@@ -107,6 +135,20 @@ $(function() {
     });
     $('#serialize').click(function(){
         generateStaticCode();
+        $("#dialog").dialog("open");
+    });
+
+    //Initialize dialog
+    $("#dialog").dialog({
+        autoOpen: false,
+        show: {
+            effect: "blind",
+            duration: 100
+        },
+        hide: {
+            effect: "blind",
+            duration: 100
+        }
     });
 
     generateStaticCode();
