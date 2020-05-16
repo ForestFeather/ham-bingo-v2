@@ -81,6 +81,22 @@ function checkAll(checktoggle) {
   }
 }
 
+function generateStaticCode() {
+           values = $("#SettingsForm").serializeArray();
+
+           values = values.concat(
+               jQuery('#SettingsForm input[type=checkbox]:not(:checked)').map(
+                   function() {
+                       return {"name": this.id, "value": 'off'}
+                   }).get()
+           );
+           values = jQuery.param( values );
+
+         $('#serializeCode').attr("href","?" + values);
+           $('#serializeCode').text("Generated!");
+
+}
+
 $(function() {
     $('.expand-settingsGroups').click(function(){
         $('.content-settingsGroups').slideToggle('slow');
@@ -90,18 +106,8 @@ $(function() {
         $(this).toggleClass('bingoSelected');    
     });
     $('#serialize').click(function(){
-        values = $("#SettingsForm").serializeArray();
-
-        values = values.concat(
-            jQuery('#SettingsForm input[type=checkbox]:not(:checked)').map(
-                function() {
-                    return {"name": this.id, "value": 'off'}
-                }).get()
-        );
-        values = jQuery.param( values );
-
-        $('#serializeCode').attr("href",values);
-        $('#serializeCode').text(values);
-        $
+        generateStaticCode();
     });
+
+    generateStaticCode();
 });
